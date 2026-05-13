@@ -102,6 +102,3 @@ Standard Gmail passwords will NOT work. You must use an **App Password**:
 If you delete the contents of the `data/` folder:
 1. **recruiters.csv**: You will lose all extracted email addresses and will need to run the scan again.
 2. **sent_log.csv**: The bot will lose its memory of who it has already emailed and might send duplicate emails to the same people.
-
----
-*Developed for professional job seekers.*
