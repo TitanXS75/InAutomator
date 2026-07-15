@@ -11,13 +11,11 @@ from playwright.sync_api import sync_playwright, Page
 from utils.logger import setup_logger
 from config.settings import (
     LINKEDIN_EMAIL, LINKEDIN_PASSWORD,
-    LINKEDIN_LOGIN_URL, PAGE_LOAD_DELAY, ACTION_DELAY
+    LINKEDIN_LOGIN_URL, PAGE_LOAD_DELAY, ACTION_DELAY,
+    USER_DATA_DIR
 )
 
 logger = setup_logger()
-
-# Path to store browser session data
-USER_DATA_DIR = os.path.join(os.getcwd(), "user_data")
 
 class LinkedInLogin:
     def __init__(self, headless: bool = False):

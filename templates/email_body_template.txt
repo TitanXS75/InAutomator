@@ -1,0 +1,13 @@
+Dear {recruiter_name},
+
+I came across your post about a {job_keyword} opportunity on LinkedIn and I am very interested in exploring this role further.
+
+I have hands-on experience in {job_keyword} development and I am confident my background aligns well with what you are looking for. Please find my resume attached for your review.
+
+I would love the opportunity to connect and discuss how I can contribute to your team or your client's requirements.
+
+Looking forward to hearing from you.
+
+Warm regards,
+{sender_name}
+{gmail_address}

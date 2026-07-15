@@ -3,12 +3,8 @@ modules/email_composer.py
 Generates personalized professional email content for each recruiter.
 """
 
-from config.settings import (
-    EMAIL_SUBJECT_TEMPLATE,
-    EMAIL_BODY_TEMPLATE,
-    SENDER_NAME,
-    GMAIL_ADDRESS,
-)
+import os
+import config.settings as settings
 
 
 class EmailComposer:
@@ -28,16 +24,23 @@ class EmailComposer:
         job_keyword     = recruiter.get("keyword", "Software Developer")
         recruiter_email = recruiter.get("email", "")
 
-        subject = EMAIL_SUBJECT_TEMPLATE.format(
+        subject_template = settings.get_email_subject_template()
+        body_template = settings.get_email_body_template()
+
+        # Read latest values from environment (GUI updates os.environ before running automation).
+        sender_name = os.environ.get("SENDER_NAME", settings.SENDER_NAME)
+        gmail_address = os.environ.get("GMAIL_ADDRESS", settings.GMAIL_ADDRESS)
+
+        subject = subject_template.format(
             job_keyword=job_keyword,
-            sender_name=SENDER_NAME,
+            sender_name=sender_name,
         )
 
-        body = EMAIL_BODY_TEMPLATE.format(
+        body = body_template.format(
             recruiter_name=recruiter_name,
             job_keyword=job_keyword,
-            sender_name=SENDER_NAME,
-            gmail_address=GMAIL_ADDRESS,
+            sender_name=sender_name,
+            gmail_address=gmail_address,
         )
 
         return {
