@@ -45,7 +45,7 @@ def _default_env_vars():
         "GMAIL_ADDRESS": "",
         "GMAIL_APP_PASSWORD": "",
         "SENDER_NAME": "",
-        "RESUME_PATH": "assets/resume.pdf",
+        "RESUME_PATH": "",
         "PAGE_LOAD_DELAY": "3.0",
         "SCROLL_DELAY": "2.0",
         "ACTION_DELAY": "1.5",
